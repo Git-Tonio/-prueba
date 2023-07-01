@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class PersonaController extends Controller
 {
-   public function index()
+   public function index(Request $request)
    {
+      $info = $request->all();
+      $name = $request->query('nombre');
+
       // Types of msj
 
       // $msj = "I'm a msj";
@@ -18,6 +21,8 @@ class PersonaController extends Controller
       // echo "I'm an echo";
       // return "I'm Index of person";
 
-      return view('persona');
+      return view('persona',['name'=> $name]);
+      // return $name;
+
    }
 }

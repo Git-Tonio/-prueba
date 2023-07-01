@@ -11,11 +11,9 @@
 </head>
 
 <body class="antialiased">
-    <h2>Persona</h2>
-
-    <h4>Bienvenido : {{$name}}</h4>
-
-    
+    <h2>Cliente</h2>
+    <h4>Su id es : {{$id}} </h4>
+    <h4>El codigo {{$msg}} </h4>
 
 </body>
 

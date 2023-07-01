@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use function League\Flysystem\get;
 
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,5 @@ Route::get('/cliente', function () {
 
 Route::get('/persona', [PersonaController::class,'index'])->name('empleado');
 
+Route::get('/cliente/{id}', [ClienteController::class,'index'])->name('cliente');
 
