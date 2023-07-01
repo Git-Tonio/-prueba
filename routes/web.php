@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use function League\Flysystem\get;
 
+use App\Http\Controllers\PersonaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/persona', function () {
-    return "Hi I'm a person";
+Route::get('/cliente', function () {
+    return "Hi I'm a client";
 });
+
+Route::get('/persona', [PersonaController::class,'index'])->name('empleado');
 
 
